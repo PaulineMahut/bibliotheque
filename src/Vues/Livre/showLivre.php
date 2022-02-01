@@ -7,10 +7,14 @@
     <title>Tous les livres</title>
 </head>
 <body>
-    <div><?=$livre->getTitle()?></div>
-    <div><?=$livre->getResume()?></div>
-    <div><?=$livre->getAuthor()?></div>
-    <div><?=$livre->getEditor()?></div>
-
+<?php foreach ($aLivres as $k => $livre) { //parcours un tableau
+        $title = $livre->getTitle();
+        $author = $livre->getAuthor();
+        $id = $livre->getId();
+        print("<p>" . $title . ' ' . "<span style='font-weight:bold'>" . $author . "</span>" . ' ' . "<p/>
+        <a href='http://localhost/bibliotheque/modify/$id'>Modifier</a>
+        <br/>");
+    }
+    ?>
 </body>
 </html>
