@@ -22,7 +22,7 @@ $router->post("/modify/:id", "App\Controller\LivreController@modifyLivre");
 $router->get("/note", "App\Controller\NoteController@addNote");
 $router->post("/note", "App\Controller\NoteController@addNote");
 
-$router->post("/note/:id", "App\Controller\NoteController@add");
+$router->post("/note/:id", "App\Controller\NoteController@addNote");
 
 $router->get("/addUser", "App\Controller\UserController@addUser");
 $router->post("/addUser", "App\Controller\UserController@addUser");
